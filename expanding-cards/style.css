@@ -1,63 +1,30 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Muli', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
-}
-
 .container {
-  display: flex;
-  width: 90vw;
+  display : flex;
+  /* flex-direction: column; */
+  gap : 10px;
+  padding:20px;
+  height : 100vh;
+  /* width: 100%; */
+  /* border : 1px solid #ddd; */
+  /* border-radius: 10px; */
 }
-
 .panel {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 80vh;
-  border-radius: 50px;
-  color: #fff;
-  cursor: pointer;
-  flex: 0.5;
-  margin: 10px;
   position: relative;
-  -webkit-transition: all 700ms ease-in;
+  flex : 1;
+  /* display: flex; */
+  padding: 10px;
+  border-radius: 15px;
+  transition: flex 0.3s ease;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
 }
-
-.panel h3 {
-  font-size: 24px;
+h3 {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  margin: 0;
-  opacity: 0;
+  bottom: 5px;
+  text-align : left;
+  padding: 1px;
 }
-
 .panel.active {
-  flex: 5;
-}
-
-.panel.active h3 {
-  opacity: 1;
-  transition: opacity 0.3s ease-in 0.4s;
-}
-
-@media (max-width: 480px) {
-  .container {
-    width: 100vw;
-  }
-
-  .panel:nth-of-type(4),
-  .panel:nth-of-type(5) {
-    display: none;
-  }
+  flex:10
 }
